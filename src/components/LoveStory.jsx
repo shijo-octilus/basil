@@ -22,15 +22,15 @@ export default function LoveStory() {
       icon: Coffee
     },
     {
-      year: 'CHAPTER IV',
-      title: 'Our Engagement',
-      description: 'Surrounded by the warmth and prayers of our families, we exchanged rings and pledged forever.',
+      year: 'CHAPTER IV • 24 AUGUST 2026',
+      title: 'Holy Engagement',
+      description: 'Surrounded by family prayers, we exchange rings at St. Peter’s Orthodox Valiya Palli, Meenangadi.',
       icon: Gem
     },
     {
-      year: 'CHAPTER V',
-      title: 'Two Hearts, One Covenant',
-      description: 'Now, as two families unite, we joyfully step into Holy Matrimony to begin our forever journey.',
+      year: 'CHAPTER V • 31 AUGUST 2026',
+      title: 'Holy Marriage',
+      description: 'As two families unite, we joyfully step into Holy Matrimony to begin our forever journey.',
       icon: Church
     }
   ];

@@ -65,15 +65,6 @@ export default function FamilySection() {
 
         </div>
 
-        {/* Best Wishes Highlight */}
-        <div className="mt-12 max-w-md mx-auto p-6 rounded-2xl bg-gradient-to-r from-[#F3ECE1] via-white to-[#F3ECE1] border border-[#E5C384] shadow-md">
-          <span className="font-cinzel text-[10px] tracking-widest uppercase text-[#9A7B38] font-bold block mb-1">
-            SPECIAL BEST WISHES
-          </span>
-          <h4 className="font-script text-4xl text-[#8B263E]">
-            Ebina & Ribin
-          </h4>
-        </div>
 
       </div>
     </section>

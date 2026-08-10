@@ -1,8 +1,20 @@
 import React from 'react';
-import { MapPin, Clock, Utensils, Church, Navigation, ExternalLink } from 'lucide-react';
+import { MapPin, Clock, Utensils, Church, Navigation, ExternalLink, Heart } from 'lucide-react';
 
 export default function EventSchedule() {
   const events = [
+    {
+      title: 'Holy Engagement',
+      subtitle: 'Ring Ceremony & Prayers',
+      time: '11:00 AM IST',
+      day: 'Monday, 24th August 2026',
+      venue: 'St. Peter’s Orthodox Valiya Palli',
+      location: 'Meenangadi, Wayanad',
+      icon: Heart,
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=St.+Peter%27s+Orthodox+Valiya+Palli+Meenangadi',
+      image: '/images/gallery-1.jpg',
+      badge: 'ENGAGEMENT'
+    },
     {
       title: 'Holy Marriage Ceremony',
       subtitle: 'Nuptial Blessing',
@@ -24,14 +36,14 @@ export default function EventSchedule() {
       location: 'Millumukku, Wayanad',
       icon: Utensils,
       mapUrl: 'https://www.google.com/maps/search/?api=1&query=Bichas+Auditorium+Millumukku',
-      image: '/images/gallery-1.jpg',
+      image: '/images/couple-portrait.jpg',
       badge: 'FEAST'
     }
   ];
 
   return (
     <section className="relative py-16 px-4 sm:px-6 bg-[#FAF7F2]">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         
         {/* Header */}
         <div className="flex items-center justify-center gap-3 mb-2">
@@ -51,7 +63,7 @@ export default function EventSchedule() {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {events.map((event, idx) => {
             const IconComponent = event.icon;
             return (
@@ -74,7 +86,7 @@ export default function EventSchedule() {
 
                   <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2 text-white">
                     <IconComponent className="w-5 h-5 text-[#E5C384]" />
-                    <h3 className="font-serif-display text-2xl font-bold">
+                    <h3 className="font-serif-display text-xl font-bold">
                       {event.title}
                     </h3>
                   </div>
@@ -91,7 +103,7 @@ export default function EventSchedule() {
                         <span className="font-cinzel text-xs font-bold text-[#2C2623]">
                           {event.time}
                         </span>
-                        <span className="font-serif-display text-xs text-[#2C2623]/70 block">
+                        <span className="font-serif-display text-xs text-[#2C2623]/70 block font-semibold">
                           {event.day}
                         </span>
                       </div>
