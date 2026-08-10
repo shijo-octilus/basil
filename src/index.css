@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #FAF7F2;
+    --bg-cream-dark: #F3ECE1;
+    --text-ink: #2C2623;
+    --rose-deep: #8B263E;
+    --rose-soft: #D98282;
+    --gold-primary: #C5A059;
+    --gold-soft: #E5C384;
+    --gold-dark: #9A7B38;
+    --sage-deep: #4A5D4E;
+    --sage-soft: #E2E8E4;
+    
+    --font-cinzel: 'Cinzel', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-script: 'Great Vibes', cursive;
+    --font-script-alt: 'Alex Brush', cursive;
+    --font-sans: 'Inter', sans-serif;
+  }
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--bg-cream);
+  color: var(--text-ink);
+  overflow-x: hidden;
+}
+
+/* Custom Typography Helpers */
+.font-cinzel { font-family: var(--font-cinzel); }
+.font-serif-display { font-family: var(--font-serif); }
+.font-script { font-family: var(--font-script); }
+.font-script-alt { font-family: var(--font-script-alt); }
+.font-sans { font-family: var(--font-sans); }
+
+/* Shadows */
+.shadow-gold-soft {
+  box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.25);
+}
+.shadow-elegant {
+  box-shadow: 0 20px 40px -15px rgba(44, 38, 35, 0.12), 0 0 15px rgba(197, 160, 89, 0.15);
+}
+.shadow-rose {
+  box-shadow: 0 12px 30px -8px rgba(139, 38, 62, 0.3);
+}
+
+/* Shimmer & Glow Effects */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B8860B 0%, #E5C384 50%, #9A7B38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rose-gradient-text {
+  background: linear-gradient(135deg, #8B263E 0%, #B84A62 50%, #681528 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Decorative Gold Line Divider */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.gold-divider::before,
+.gold-divider::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, #E5C384, transparent);
+}
+
+/* Envelope Flap Animations */
+@keyframes openEnvelopeFlap {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 30;
+  }
+  50% {
+    transform: rotateX(90deg);
+    z-index: 30;
+  }
+  100% {
+    transform: rotateX(180deg);
+    z-index: 5;
+  }
+}
+
+.animate-open-flap {
+  transform-origin: top;
+  animation: openEnvelopeFlap 1.2s ease-in-out forwards;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Pulsing audio equalizer bar */
+@keyframes barPulse {
+  0%, 100% { height: 6px; }
+  50% { height: 18px; }
+}
+.animate-bar-1 { animation: barPulse 1s ease-in-out infinite; }
+.animate-bar-2 { animation: barPulse 0.8s ease-in-out infinite 0.2s; }
+.animate-bar-3 { animation: barPulse 1.2s ease-in-out infinite 0.4s; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5C384;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
